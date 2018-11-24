@@ -1,0 +1,14 @@
+<p>
+  thaythechuoi works!
+</p>
+<form (ngSubmit)="onSubmit()" #ThayTheForm = "ngForm">
+  <p>Đoạn văn gốc</p>
+  <textarea rows="3" cols="70" [(ngModel)]="doangoc" name="doangoc"></textarea><br />
+  <label>Từ gốc: </label> <input [(ngModel)]="tugoc" name="tugoc" />
+  <label>Thay thế bằng: </label> <input [(ngModel)]="tuthaythe" name="tuthaythe" /><br />
+  <textarea rows="3" cols="70" ngModel [(ngModel)]="doanthaythe" name="doanthaythe"></textarea><br />
+  <hr />
+  <div class="buttonHolder">
+    <input [disabled]="!isValidator()" type="submit" value="Thực hiện" />
+  </div>
+</form>

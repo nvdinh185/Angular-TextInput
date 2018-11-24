@@ -1,0 +1,12 @@
+<p>
+  hinhchunhat works!
+</p>
+<form (submit)="tinhHCN(HCNForm)" #HCNForm="ngForm">
+  <input placeholder="Nhap chieu dai" ngModel name="chieuDai" required />
+  <br /><br />
+  <input placeholder="Nhap chieu rong" ngModel name="chieuRong" required />
+  <br /><br />
+  <input [disabled]="HCNForm.invalid" type="submit" value="Tinh" />
+</form>
+<h4 *ngIf="chuVi!=null">Chu vi: {{ chuVi }}</h4>
+<h4 *ngIf="dienTich!=null">Dien tich: {{ dienTich }}</h4>

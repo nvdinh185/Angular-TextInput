@@ -1,0 +1,10 @@
+<p>
+  hinhtron works!
+</p>
+<form (submit)="onSubmit(HinhTronForm)" #HinhTronForm="ngForm">
+  <input placeholder="ban kinh" [(ngModel)]="banKinh" name="banKinh" />
+  <br /><br />
+  <input placeholder="dien tich" [(ngModel)]="dienTich" name="dienTich" />
+  <br /><br />
+  <input [disabled]="!isValidator(HinhTronForm)" type="submit" value="Tinh" />
+</form>

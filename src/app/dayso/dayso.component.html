@@ -1,0 +1,9 @@
+<p>
+  dayso works!
+</p>
+<form (ngSubmit)="tinhTong(DaySoForm)" #DaySoForm = "ngForm">
+  <input placeholder="nhap day so" ngModel name="dayso" required />
+  <br /><br />
+  <input [disabled]="DaySoForm.invalid" type="submit" value="Tinh" />
+</form>
+<p *ngIf="tong!=0">Tong cua day so la: {{ tong }}</p>
