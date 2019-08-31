@@ -1,7 +1,10 @@
 <p>
   dayso works!
 </p>
-<form (ngSubmit)="tinhTong(DaySoForm)" #DaySoForm = "ngForm">
+<!-- Sử dụng ngSubmit thay cho submit để khi sinh ra exception
+thì chỉ ném ngoại lệ ra ở console.log mà không tải lại trang
+và submit giá trị đi -->
+<form (ngSubmit)="tinhTong(DaySoForm)" #DaySoForm="ngForm">
   <input placeholder="nhap day so" ngModel name="dayso" required />
   <br /><br />
   <input [disabled]="DaySoForm.invalid" type="submit" value="Tinh" />

@@ -21,11 +21,6 @@ export class HinhtronComponent implements OnInit {
     return true;
   }
   onSubmit(HinhTronForm) {
-    /* if (typeof (HinhTronForm.value.banKinh) == "undefined" && typeof (HinhTronForm.value.dienTich) == "undefined") {
-      alert("Vui long nhap gia tri!");
-    } else if (typeof (HinhTronForm.value.banKinh) != "undefined" && typeof (HinhTronForm.value.dienTich) != "undefined") {
-      alert("Chi nhap mot trong hai gia tri!");
-    } else  */
     if (typeof (HinhTronForm.value.banKinh) != "undefined") {
       this.dienTich = parseInt(HinhTronForm.value.banKinh) * parseInt(HinhTronForm.value.banKinh) * 3.14;
     } else {

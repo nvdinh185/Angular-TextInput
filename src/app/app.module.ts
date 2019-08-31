@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HinhchunhatComponent } from './hinhchunhat/hinhchunhat.component';
 import { DaysoComponent } from './dayso/dayso.component';
@@ -19,7 +18,6 @@ import { ThaythechuoiComponent } from './thaythechuoi/thaythechuoi.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule
   ],
   providers: [],
