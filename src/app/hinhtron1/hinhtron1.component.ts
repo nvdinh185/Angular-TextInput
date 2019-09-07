@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-hinhtron',
-  templateUrl: './hinhtron.component.html',
-  styleUrls: ['./hinhtron.component.css']
+  selector: 'app-hinhtron1',
+  templateUrl: './hinhtron1.component.html',
+  styleUrls: ['./hinhtron1.component.css']
 })
-export class HinhtronComponent implements OnInit {
+export class Hinhtron1Component implements OnInit {
   banKinh;
   dienTich;
   check = false;
@@ -13,12 +13,21 @@ export class HinhtronComponent implements OnInit {
 
   ngOnInit() { }
 
-  getMessage() {
+  onChange(ev, name) {
+    if (name === 'bankinh') {
+      this.banKinh = ev.target.value;
+      console.log(this.banKinh)
+    } else {
+      this.dienTich = ev.target.value;
+      console.log(this.dienTich)
+    }
+  }
+
+  isValidator() {
     if (((this.banKinh != undefined && this.banKinh != "") && (this.dienTich != undefined && this.dienTich != "")) ||
       ((this.banKinh == undefined || this.banKinh == "") && (this.dienTich == undefined || this.dienTich == ""))) {
-      this.check = false;
-      return "Vui lòng nhập 1 trong 2 trường!";
-    } else this.check = true;
+      return false;
+    } else return true;
   }
 
   onSubmit() {

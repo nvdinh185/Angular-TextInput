@@ -1,13 +1,13 @@
 <div class="wrapper">
-  <h2>Hình tròn</h2>
+  <h2>Hình tròn 2</h2>
   <form (submit)="onSubmit(HinhTronForm)" #HinhTronForm="ngForm">
     <label>Bán kính:</label>
-    <input [(ngModel)]="dblBK" name="bankinh" />
+    <input ngModel name="bankinh" value="{{dblBK}}" />
     <br /><br />
     <label>Diện tích:</label>
-    <input [(ngModel)]="dblDT" name="dientich" />
+    <input ngModel name="dientich" value="{{dblDT}}" />
     <br /><br />
     <p>{{ getMessage(HinhTronForm) }}</p>
-    <input type="submit" value="Tính" [disabled] = "!check" />
+    <input type="submit" value="Tính" [disabled]="!check" />
   </form>
 </div>

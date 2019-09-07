@@ -1,0 +1,8 @@
+<p>
+  hinhtron1 works!
+</p>
+<input placeholder="ban kinh" (keyup)="onChange($event, 'bankinh')" value="{{banKinh}}" />
+<br /><br />
+<input placeholder="dien tich" (keyup)="onChange($event, 'dientich')" value="{{dienTich}}" />
+<br /><br />
+<button [disabled]="!isValidator()" (click)="onSubmit()">Tính</button>

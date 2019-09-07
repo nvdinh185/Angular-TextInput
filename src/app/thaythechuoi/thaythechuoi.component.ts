@@ -36,6 +36,7 @@ export class ThaythechuoiComponent implements OnInit {
    * Nếu chưa nhập 1 trong 3 trường thì trả về false
    */
   isValidator() {
+    console.log(123)
     if ((typeof (this.doangoc) == "undefined" || this.doangoc === '')
       || (typeof (this.tugoc) == "undefined" || this.tugoc === '')
       || (typeof (this.tuthaythe) == "undefined" || this.tuthaythe === ''))

@@ -1,10 +1,9 @@
 <p>
   hinhtron works!
 </p>
-<form (submit)="onSubmit(HinhTronForm)" #HinhTronForm="ngForm">
-  <input placeholder="ban kinh" [(ngModel)]="banKinh" name="banKinh" />
-  <br /><br />
-  <input placeholder="dien tich" [(ngModel)]="dienTich" name="dienTich" />
-  <br /><br />
-  <input [disabled]="!isValidator(HinhTronForm)" type="submit" value="Tinh" />
-</form>
+<input placeholder="ban kinh" [(ngModel)]="banKinh" />
+<br /><br />
+<input placeholder="dien tich" [(ngModel)]="dienTich" />
+<br /><br />
+<p>{{ getMessage() }}</p>
+<button [disabled]="!check" (click)="onSubmit()">Tính</button>
