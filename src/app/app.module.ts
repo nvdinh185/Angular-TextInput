@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { HinhchunhatComponent } from './hinhchunhat/hinhchunhat.component';
 import { DaysoComponent } from './dayso/dayso.component';
 import { HinhtronComponent } from './hinhtron/hinhtron.component';
+import { Hinhtron2Component } from './hinhtron2/hinhtron2.component';
 import { ThaythechuoiComponent } from './thaythechuoi/thaythechuoi.component';
+import { Thaythechuoi2Component } from './thaythechuoi2/thaythechuoi2.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { ThaythechuoiComponent } from './thaythechuoi/thaythechuoi.component';
     HinhchunhatComponent,
     DaysoComponent,
     HinhtronComponent,
+    Hinhtron2Component,
     ThaythechuoiComponent,
+    Thaythechuoi2Component
   ],
   imports: [
     BrowserModule,

@@ -15,11 +15,13 @@ export class HinhtronComponent implements OnInit {
   isValidator(HinhTronForm) {
     var typeBanKinh = typeof(HinhTronForm.value.banKinh);
     var typeDienTich = typeof(HinhTronForm.value.dienTich);
+    console.log(typeBanKinh, typeDienTich)
     if (((typeBanKinh == "undefined") && (typeDienTich == "undefined"))
       || ((typeBanKinh != "undefined") && (typeDienTich != "undefined")))
       return false;
     return true;
   }
+  
   onSubmit(HinhTronForm) {
     if (typeof (HinhTronForm.value.banKinh) != "undefined") {
       this.dienTich = parseInt(HinhTronForm.value.banKinh) * parseInt(HinhTronForm.value.banKinh) * 3.14;

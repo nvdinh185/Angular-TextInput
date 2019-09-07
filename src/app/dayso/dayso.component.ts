@@ -12,13 +12,15 @@ export class DaysoComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+
   tinhTong(DaySoForm) {
+    if (!DaySoForm.value.dayso.includes(',')) {
+      throw new Error('Chuỗi phải ngăn cách bởi dấu phẩy!')
+    }
     this.arrDaySo = DaySoForm.value.dayso.split(",");
     for (var i = 0; i < this.arrDaySo.length; i++) {
       this.tong += parseInt(this.arrDaySo[i]);
     }
-    throw new Error('Form is invalid')
   }
 
 }
