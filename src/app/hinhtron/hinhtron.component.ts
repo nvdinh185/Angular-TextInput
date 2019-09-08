@@ -23,9 +23,9 @@ export class HinhtronComponent implements OnInit {
 
   onSubmit() {
     if (typeof (this.banKinh) != "undefined" && this.banKinh !== "") {
-      this.dienTich = parseInt(this.banKinh) * parseInt(this.banKinh) * 3.14;
+      this.dienTich = parseFloat(this.banKinh) * parseFloat(this.banKinh) * 3.14;
     } else {
-      this.banKinh = Math.sqrt(parseInt(this.dienTich) / 3.14);
+      this.banKinh = Math.sqrt(parseFloat(this.dienTich) / 3.14);
     }
   }
 }

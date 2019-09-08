@@ -16,10 +16,8 @@ export class Hinhtron1Component implements OnInit {
   onChange(ev, name) {
     if (name === 'bankinh') {
       this.banKinh = ev.target.value;
-      console.log(this.banKinh)
     } else {
       this.dienTich = ev.target.value;
-      console.log(this.dienTich)
     }
   }
 
@@ -32,9 +30,9 @@ export class Hinhtron1Component implements OnInit {
 
   onSubmit() {
     if (typeof (this.banKinh) != "undefined" && this.banKinh !== "") {
-      this.dienTich = parseInt(this.banKinh) * parseInt(this.banKinh) * 3.14;
+      this.dienTich = parseFloat(this.banKinh) * parseFloat(this.banKinh) * 3.14;
     } else {
-      this.banKinh = Math.sqrt(parseInt(this.dienTich) / 3.14);
+      this.banKinh = Math.sqrt(parseFloat(this.dienTich) / 3.14);
     }
   }
 }

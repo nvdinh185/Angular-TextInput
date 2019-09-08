@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DaysoComponent implements OnInit {
   arrDaySo;
-  tong = 0;
+  tong;
   constructor() { }
 
   ngOnInit() {
@@ -18,6 +18,7 @@ export class DaysoComponent implements OnInit {
       throw new Error('Chuỗi phải ngăn cách bởi dấu phẩy!')
     }
     this.arrDaySo = DaySoForm.value.dayso.split(",");
+    this.tong = 0;
     for (var i = 0; i < this.arrDaySo.length; i++) {
       this.tong += parseInt(this.arrDaySo[i]);
     }
