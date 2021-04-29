@@ -2,7 +2,7 @@
   hinhchunhat works!
 </p>
 <!-- Sử dụng Template-driven forms để nhập dữ liệu -->
-<form (submit)="tinhHCN(HCNForm)" #HCNForm="ngForm">
+<form (ngSubmit)="tinhHCN(HCNForm)" #HCNForm="ngForm">
   <!-- Hiển thị ô input để nhập chiều dài, có validate -->
   <input placeholder="Nhap chieu dai" ngModel name="chieuDai" required />
   <br /><br />

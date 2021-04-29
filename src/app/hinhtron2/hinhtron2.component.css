@@ -1,15 +1,15 @@
 .wrapper {
 	width: 620px;
 	margin: 10px auto;
-	background: #8BCBF2;
+	background: #8bcbf2;
 }
-h2{
+h2 {
 	font-family: tahoma;
 	font-size: 30px;
 	font-weight: bold;
 	color: red;
 	padding: 10px;
 }
-form{
+form {
 	padding: 10px;
 }
